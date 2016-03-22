@@ -1,5 +1,7 @@
 # Summary
 
+* [Text Editors](text-editors/README.md)
+	* [VIM](text-editors/vim.md)
 * [HTML](html/README.md)
 	* [HTML APIs](html/html-apis/README.md)
 		* [Canvas](html/html-apis/canvas.md)
