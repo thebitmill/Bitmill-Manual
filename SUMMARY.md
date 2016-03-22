@@ -58,6 +58,7 @@
 	* [Spysass](sass/spysass.md)
 * [SVG](svg/README.md)
 	* [Inkscape](svg/inkscape.md)
+* [Git](git/README.md)
 * [Deploying](deploying/README.md)
 	* [Nginx](deploying/nginx.md)
 	* [SSL](deploying/ssl.md)
