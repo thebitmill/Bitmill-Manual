@@ -1,5 +1,7 @@
 # Prototype
 
++ <http://lionelbarrow.com/2016/03/19/inheritance-is-terrible/>
++ <https://github.com/raganwald-deprecated/homoiconic/blob/master/2010/12/oop.md#readme>
 One of the few ways you can truly fail in JavaScript programming, is trying to
 think in the same ways that you do with normal Object Oriented Programming.
 This is so important, it gets its own, short, section. Make sure you read and
