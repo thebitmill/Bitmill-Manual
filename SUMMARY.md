@@ -9,6 +9,7 @@
 	* [Prototype](javascript/prototype.md)
 	* [Functional Programming](javascript/functional-programming.md)
 	* [Lodash](javascript/lodash.md)
+	* [Modules](javascript/modules.md)
 * [Node.js](node.js/README.md)
 	* [Pros & Cons](node.js/pros-cons.md)
 	* [Modules](node.js/modules.md)
