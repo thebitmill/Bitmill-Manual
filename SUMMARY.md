@@ -35,6 +35,7 @@
 	* [SASS](css-sass/sass.md)
 	* [Spysass](css-sass/spysass.md)
 * [SVG](svg/README.md)
+	* [Inkscape](svg/inkscape.md)
 * [Deploying](deploying/README.md)
 	* [Nginx](deploying/nginx.md)
 	* [SSL](deploying/ssl.md)
