@@ -64,3 +64,4 @@
 * [Command Line](command-line/README.md)
 * [Projects](projects/README.md)
 	* [Rating](projects/rating.md)
+	* [Games](projects/games.md)
