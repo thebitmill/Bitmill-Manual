@@ -31,6 +31,7 @@
 * [Testing](testing/README.md)
 	* [Tape](testing/tape.md)
 * [CSS & SASS](css-sass/README.md)
+	* [Box Model](css-sass/box-model.md)
 	* [Display Modes](css-sass/display-modes.md)
 	* [SASS](css-sass/sass.md)
 	* [Spysass](css-sass/spysass.md)
