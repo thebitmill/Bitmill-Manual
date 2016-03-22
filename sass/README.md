@@ -1,4 +1,4 @@
-# Introduktion
+# SASS
 
 SASS is a so called CSS preprocessor. Another one is LESS, but it isgenerally
 known to be inferior, so we use SASS. Compass is sort of anadd on to SASS with
