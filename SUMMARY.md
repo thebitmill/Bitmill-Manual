@@ -1,6 +1,8 @@
 # Summary
 
 * [HTML](html/README.md)
+	* [HTML APIs](html/html-apis/README.md)
+		* [Canvas](html/html-apis/canvas.md)
 	* [Structured Data](html/structured_data.md)
 * [JavaScript](javascript/README.md)
 	* [Functions](javascript/functions.md)
