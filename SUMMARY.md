@@ -1,5 +1,6 @@
 # Summary
 
+* [External Resources](external-resources.md)
 * [Text Editors](text-editors/README.md)
 	* [VIM](text-editors/vim.md)
 * [HTML](html/README.md)
