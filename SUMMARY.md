@@ -21,6 +21,7 @@
 * [MongoDB](mongodb/README.md)
 * [Front End JavaScript](front-end-javascript/README.md)
 	* [Why Not Framework X?](front-end-javascript/why-not-framework-x.md)
+	* [Recommonded Libraries](front-end-javascript/recommended-libraries.md)
 	* [Backbone](front-end-javascript/backbone.md)
 	* [Browserify](front-end-javascript/browserify.md)
 	* [jQuery](front-end-javascript/jquery.md)
