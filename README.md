@@ -23,3 +23,12 @@ verbose or in need of improvement, please do not hesitate to contribute.
 The portal has many channels for submitting ideas or concepts. If you do not
 want to edit this guide directly, you can always submit your thoughts to a feed
 there. If it is worthy, it will quickly find its way into this guide.
+
+## DOMAINS
+
++ <https://domainr.com/> (has API as well, see Mashape below)
+
+## API!!!!
+
++ <
++ <https://www.mashape.com/>
