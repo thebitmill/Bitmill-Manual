@@ -37,7 +37,7 @@ Simply change every dependency's version to \*, then run `npm update --save`.
 }
 ```
 
-There is well used module that does this automatically called npm-check-updates. Once installed globally, run
+There is well used module that does this automatically called `npm-check-updates`. Once installed globally, run
 
 ```
 $ ncu
