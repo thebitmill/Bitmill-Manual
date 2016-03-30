@@ -19,6 +19,14 @@ The following is a list which all users of Vim MUST use/learn.
 1. Fugitive (Git wrapper / plugin)
 2. Syntastic
 
+## Map Leader
+
+It is highly recommended to map your leader to spacebar!
+
+```
+let mapleader = "\<Space>"
+```
+
 ## Next Steps
 
 + <https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/>
