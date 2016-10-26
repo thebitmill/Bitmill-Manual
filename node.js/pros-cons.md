@@ -4,7 +4,7 @@
 
 1. Full Stack (JavaScript everywhere)
 2. Fast
-3. Worlds largets resposity of modules (NPM)
+3. Worlds largest respository of modules (NPM)
 
 ## Cons
 

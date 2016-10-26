@@ -42,7 +42,6 @@
 	* [Backbone](front-end-javascript/backbone.md)
 	* [Browserify](front-end-javascript/browserify.md)
 	* [jQuery](front-end-javascript/jquery.md)
-	* [Backbone](front-end-javascript/backbone.md)
 	* [Ridge](front-end-javascript/ridge.md)
 	* [Spytext](front-end-javascript/spytext.md)
 * [API](api/README.md)
