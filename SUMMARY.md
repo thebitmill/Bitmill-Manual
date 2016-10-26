@@ -41,7 +41,7 @@
 	* [Recommonded Libraries](front-end-javascript/recommended-libraries.md)
 	* [DOM](front-end-javascript/DOM.md)
 	* [Backbone](front-end-javascript/backbone.md)
-	* [Browserify](front-end-javascript/browserify.md)
+	* [Rollup](front-end-javascript/rollup.md)
 	* [jQuery](front-end-javascript/jquery.md)
 	* [Ridge](front-end-javascript/ridge.md)
 	* [Spytext](front-end-javascript/spytext.md)
