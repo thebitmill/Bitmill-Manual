@@ -6,7 +6,7 @@ There are two ways to define a function, either by assigning it to
 
 Creating a named function:
 
-```
+```js
 function testicle() {
 	console.log('poo far');
 }
@@ -20,8 +20,8 @@ to it again.
 
 Assigning to variable:
 
-```
-var testicle = function () {
+```js
+const testicle = function () {
 	console.log('poo far');
 }
 
@@ -30,8 +30,8 @@ console.log(testicle.name)// '' (empty string)
 
 Assigning to a variable does not give a name to the function. 
 
-```
-var testicle = function () {
+```js
+const testicle = function () {
 	console.log('poo far');
 };
 ```
@@ -40,24 +40,26 @@ var testicle = function () {
 This means a function can have different name from variable. However, you
 cannot call it by it's name. TODO Why can you not call it by its name now?
 
-```
-var testicle = function penis() {
+```js
+const testicle = function penis() {
 	console.log('poo bar');
 };
 
 console.log(testicle.name)// 'penis';
+
 testicle();// 'poo bar'
+
 penis();// ReferenceError
 ```
 
 The following does work, Though I do not know why you would want to.
 
-```
+```js
 function penis() {
 	console.log('poo bar');
 };
 
-var testicle = penis;
+const testicle = penis;
 
 console.log(testicle.name)// 'penis';
 testicle();// 'poo bar'
@@ -69,12 +71,12 @@ penis();// 'poo bar'
 The difference is that `functionOne` is defined at run-time, whereas `functionTwo`
 is defined at parse-time for a script block. For example:
 
-```
+```js
 <script>
   // Error
   functionOne();
 
-  var functionOne = function() {
+  const functionOne = function() {
   };
 </script>
 
@@ -101,57 +103,6 @@ syntax:
 
 The above actually defines functionThree irrespective of test's value — unless use strict is in effect, in which case it simply raises an error.
 
-## Lexical Scoping
-
-JavaScript is lexically scoped, but only function blocks create a new scope
-(not if or for blocks for example).
-
-Since functions can be nested inside each other, several degrees of locality
-can be created.  Each local scope can see all scopes which contains it.
-
-
-```
-function() {
-	var testicle = 'one ball';
-}
-console.log(testicle); // ReferenceError
-```
-
-```
-if(true) {
-	var testicle = 'one ball';
-}
-
-console.log(testicle); // 'one ball'
-```
-
-## IIFE (Immediately Invoked Function Express)
-
-IIFEs are functions that are immediately invoked and are mostly used to create
-scopes.
-
-```
-
-(function() {
-	var secretTesticle = 'another ball';
-
-	console.log(secretTesticle);
-})();
-```
-
-Notice the brackets at the end. The following snippet (which does exactly the same
-thing) might be a little clearer:
-
-```
-var fnc = function() {
-	var secretTesticle = 'another ball';
-
-	console.log(secretTesticle);
-}
-
-fnc();
-```
-
 ## Parameters & Arguments
 
 First off, a __parameter__ is a variable that is part of a functions signature (function declaration), while
@@ -161,7 +112,7 @@ In JavaScript, a function does not need to have any parameters defined to allowi
 All arguments passed to a function are accessible through the special `arguments` array-like variable inside
 the function body.
 
-```
+```js
 function hasParameters(poo, far, and, succeed) {
 	console.log(poo);
 	console.log(far);
@@ -180,38 +131,140 @@ function lacksParameters() {
 	console.log(arguments[2]);
 	console.log(arguments[3]);
 }
+```
 
 hasParameters(1, 2, 3);// 1 2 3 undefined 1 2 3 undefined
 lacksParameters(1, 2, 3);// 1 2 3 undefined 1 2 3 undefined
 
+## Scopes
+
+JavaScript is lexically scoped, but only function blocks create a new scope
+(not if or for blocks for example). (The new `let` and `const` variables are
+lexically scoped)
+
+Since functions can be nested inside each other, several degrees of locality
+can be created.  Each local scope can see all scopes which contains it.
+
+```js
+function() {
+	const testicle = 'one ball';
+
+  function() {
+    const balls = 'two balls';
+    console.log(testicle);
+    console.log(balls);
+  }
+}
+console.log(testicle); // ReferenceError
+```
+
 ## `this`
 
-```
-var obj = {
+One of the few tricky things with JavaScript is to understand how `this` is
+bound during function calls.
+
+```js
+const obj = {
 	fnc: function() {
 		console.log(this === obj);
 		console.log(this === window);
 	}
 };
 
-var fnc = obj.fnc;
+const fnc = obj.fnc;
 
 obj.fnc();// true false
 fnc();// false true
 ```
 
-## Function.prototype.bind
+## Function.prototype.bind(thisArg)
 
-## Function.prototype.call & Function.prototype.apply
++ <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind>
 
+Returns a new function which is bound to `thisArg` and has "prefilled"
+arguments.  Very similar to LoDash' `_.partial`, except that partial does not
+alter the `this` binding.
 
+## Function.prototype.call(thisArg, ...args)
+
++ <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call>
+
+Calls a function with `this` bound to `thisArg` and `args` as arguments. Essentially the same as
+
+```js
+fnc.call(obj, arg1, arg2);
+
+// is the same as
+
+const boundFnc = fnc.bind(obj);
+
+boundFnc(arg1, arg2);
 ```
-function org() {
-	console.log('testicle');
+
+## Function.prototype.apply(thisArg, args)
+
++ <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply>
+
+Similar to `call` but takes an array of arguments, instead of the arguments seperately.
+
+Used to be useful if you had an array of unkown length that you wanted to use
+as arguments in a function call.
+
+```js
+function org(adverb, verb, noun) {
+	console.log(`I'm going to ${adverb} ${verb} your ${noun}`);
 }
 
 function ext() {
 	// do something
 	org.apply(this, arguments);
 }
+```
+
+With the advent of spread operator we rarely need .apply anymore
+
+```js
+function org(adverb, verb, noun) {
+	console.log(`I'm going to ${adverb} ${verb} your ${noun}`);
+}
+
+function ext(...args) {
+  args[2] = 'balls';
+
+	org(...args);
+}
+
+ext('gently', 'caress');
+```
+
+## Arrow Functions
+
+Arrow functions are a terse way to define anonymous functions. They are identical to 
+normal functions in all other ways except one; `this` is inherited from the surrounding
+scope and cannot be rebound.
+
+## IIFE (Immediately Invoked Function Express)
+
+IIFEs are functions that are immediately invoked and are mostly used to create
+scopes.
+
+```js
+(function() {
+	const secretTesticle = 'another ball';
+
+	console.log(secretTesticle);
+})();
+```
+
+Notice the brackets at the end. The following snippet (which does exactly the same
+thing) might be a little clearer:
+
+```js
+const fnc = function() {
+	const secretTesticle = 'another ball';
+
+	console.log(secretTesticle);
+}
+
+fnc();
 ```

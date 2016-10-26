@@ -1,33 +1,13 @@
 # Functional Programming
 
-+ <https://medium.com/javascript-scene/the-two-pillars-of-javascript-pt-2-functional-programming-a63aa53a41a4>
-
-## The 2 Pillars of JavaScript
-
-According to a certain 2 part blog series (and I agree completely), there are 2
-pillars of JavaScript:
-
-1. Objects without classes (and prototypal delegation aka OLOO — Objects Linking to Other Objects)
-2. Lambdas (with closure — the keys to functional programming)
-
-In order to fully understand the first pillar, I think said blog series falls
-shorts. Instead, read the following 3 part article on only prototypal
-delegation:
-
-Then, read the following to better grasp Functional Programming.
-
 1. [The Two Pillars of JavaScript, Part 2 (Functional Programming): How To Stop Micromanaging Everything](https://medium.com/javascript-scene/the-two-pillars-of-javascript-pt-2-functional-programming-a63aa53a41a4#.268j39loi)
 2. [Wikipedia: Functional Programming](https://en.wikipedia.org/wiki/Functional_programming)
 
-There is also a book published by O'Reilly, Functional JavaScript: Introducing
-Functional Programming With Underscore.js (2013) that has gotten pretty good
-reviews.
-
 ## Map, Reduce & Filter
 
-These 3 functions are very important in a functional programmers arsenal. They have
-long been available through libraries like Lodash, but are now commonly found in the `Array.prototyp`
-in essentially all browsesrs.
+These 3 functions are very important in a functional programmers arsenal. They
+have long been available through libraries like Lodash, but are now commonly
+available on the `Array.prototype`.
 
 + <http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/>
 
@@ -70,13 +50,17 @@ arr = arr.reduce(function(seed, value) {
 
 ### Try To Avoid Loop
 
-`.forEach` loop is simple to replace with a for loop. Even `_.forEach/_.each` on objects
-is now easily implemented with for-of loops.
-
-The only reason to use these are for perfermance.
-
-Methods using callbacks to iterate should be used because:
+`.forEach` loop is simple to replace with a for loop. Even `_.forEach` on
+objects is now easily implemented with for-of loops, but these loops should
+generally be avoided. Methods using callbacks to iterate should be preferred
+because:
 
 1. More modular code, you can reuse a previous function
 2. Can handle asyncronous data. Ie data generated from events or streams.
 
+The only reason to use good old `for` loops these are for performance.
+
+## Books
+
+- O'Reilly, Functional JavaScript: Introducing Functional Programming With
+  Underscore.js (2013)
