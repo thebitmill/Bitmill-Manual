@@ -31,3 +31,6 @@ let mapleader = "\<Space>"
 
 + <https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/>
 
+## VIM Setup for Web Development
+
++ <https://github.com/zperrault/vimrc.js>
