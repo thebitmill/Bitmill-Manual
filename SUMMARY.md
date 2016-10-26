@@ -21,6 +21,8 @@
 	* [Lodash](javascript/lodash.md)
 	* [Modules](javascript/modules.md)
 	* [Variables](javascript/variables.md)
+	* [Scopes](javascript/scopes.md)
+	* [Links](javascript/links.md)
 * [Node.js](node.js/README.md)
 	* [Pros & Cons](node.js/pros-cons.md)
 	* [NPM](node.js/npm.md)
