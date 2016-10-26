@@ -4,6 +4,7 @@
 * [Text Editors](text-editors/README.md)
 	* [VIM](text-editors/vim.md)
 	* [Sublime Text](text-editors/sublime-text.md)
+* [Introduction to HTML, CSS & JavaScript](introduction-to-html-css-and-javascript.md)
 * [HTML](html/README.md)
 	* [HTML APIs](html/html-apis/README.md)
 		* [Canvas](html/html-apis/canvas.md)
