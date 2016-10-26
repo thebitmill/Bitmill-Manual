@@ -64,7 +64,6 @@
 * [Git](git/README.md)
 * [Deploying](deploying/README.md)
 	* [Nginx](deploying/nginx.md)
-	* [SSL](deploying/ssl.md)
 	* [Digital Ocean](deploying/digital-ocean.md)
 * [Command Line](command-line/README.md)
 * [Linux](linux.md)
