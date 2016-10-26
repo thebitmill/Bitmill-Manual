@@ -106,3 +106,7 @@ To remove auto-prefixing:
 ```
 npm config set save-prefix=''
 ```
+
+## Links
+
++ <https://nodesource.com/blog/eleven-npm-tricks-that-will-knock-your-wombat-socks-off/?utm_source=javascriptweekly&utm_medium=email>
