@@ -1,5 +1,11 @@
 # Variables
 
++'4' vs parseInt('4')
+
+## Numbers
+
+Not all real numbers can accurately be represented in floating point. This can
+lead to rounding errors. See <https://en.wikipedia.org/wiki/Floating-point_arithmetic#Accuracy_problems>
 ## Hoisting
 
 ```
